@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jira Ticket Lookup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #ticketInfo {
+            margin-top: 20px;
+        }
+        #errorMessage {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jira Ticket Lookup</h1>
+    <form id="ticketForm">
+        <label for="ticketNumber">Enter Jira Ticket Number:</label>
+        <input type="text" id="ticketNumber" required>
+        <button type="submit">Lookup</button>
+    </form>
+
+    <div id="errorMessage"></div>
+
+    <div id="ticketInfo" style="display: none;">
+        <h2>Ticket Information</h2>
+        <p><strong>Summary:</strong> <span id="summary"></span></p>
+        <p><strong>Description:</strong> <span id="description"></span></p>
+        <p><strong>Status:</strong> <span id="status"></span></p>
+        <p><strong>Assignee:</strong> <span id="assignee"></span></p>
+        <p><strong>Reporter:</strong> <span id="reporter"></span></p>
+        <p><strong>Resolution:</strong> <span id="resolution"></span></p>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="app.js"></script>
+</body>
+</html>
